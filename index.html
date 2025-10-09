@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Blockchain Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome per le icone social -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- CARD CENTRALE (tutto dentro) -->
+  <div class="page">
+
+    <!-- Navbar interna, centrata -->
+    <nav class="navbar">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="menu" id="primary-menu">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Progetti</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </nav>
+
+    <main class="home-page">
+      <!-- HERO -->
+      <section class="hero home-hero" id="home">
+        <h1>Blockchain Builder </h1>
+        <p>
+          Progetto infrastrutture Web3 scalabili e sicure, con un occhio attento all'esperienza
+          utente e alle metriche operative che contano nel lungo periodo.
+        </p>
+        <a class="btn-main" href="about.html">Scopri di più</a>
+        <ul class="hero-highlights">
+          <li><i class="fa-solid fa-circle-check"></i> Smart contract progettati per audit indipendenti</li>
+          <li><i class="fa-solid fa-rocket"></i> DApp con flussi di onboarding chiari</li>
+          <li><i class="fa-solid fa-chart-line"></i> Automazioni on-chain che riducono tempi operativi</li>
+        </ul>
+
+      </section>
+
+    </main>
+
+    <footer>
+      © 2025 Blockchain Developer | Tutti i diritti riservati Ardelean Jonathan
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nav = document.querySelector('.navbar');
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('#primary-menu');
+
+      if (!nav || !toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        nav.classList.toggle('menu-open', !isExpanded);
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

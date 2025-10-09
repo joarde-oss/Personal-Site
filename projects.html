@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I miei Progetti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+    <nav class="navbar">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="menu" id="primary-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="projects.html">Progetti</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </nav>
+
+    <main class="projects-page">
+      <section class="projects-hero">
+        <h1>Progetti in arrivo</h1>
+        <p>
+          Sto lavorando a nuovi progetti che saranno presto disponibili qui.
+        </p>
+        <p class="work-in-progress">🚧 Work in progress 🚧</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2025 Blockchain Developer | Tutti i diritti riservati Ardelean Jonathan</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nav = document.querySelector('.navbar');
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('#primary-menu');
+
+      if (!nav || !toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        nav.classList.toggle('menu-open', !isExpanded);
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
