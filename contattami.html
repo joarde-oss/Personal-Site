@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contattami</title>
+  <meta name="description"
+        content="Parliamo del tuo progetto Web3: supporto su smart contract, dApp e integrazioni blockchain.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contattami – Blockchain Developer">
+  <meta property="og:description"
+        content="Parliamo del tuo prossimo progetto Web3: smart contract, dApp e automazioni on-chain.">
+  <meta property="og:image" content="https://joarde-oss.github.io/Personal-Site/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="page page-contact">
+    <nav class="navbar">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="menu" id="primary-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Progetti</a></li>
+        <li><a class="active" href="contattami.html">Contatti</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </nav>
+
+    <main class="contact-page">
+      <section class="contact-hero">
+      <div class="glow-ring"></div>
+      <div class="glow-ring glow-ring-secondary"></div>
+      <h1>Parliamo del tuo prossimo progetto</h1>
+      <p>
+        Che si tratti di progettare smart contract, creare una dApp o analizzare dati on-chain,
+        possiamo costruire insieme un percorso chiaro. Scegli il canale che preferisci e raccontami
+        le tue priorità.
+      </p>
+      <ul class="contact-highlights">
+        <li><i class="fa-solid fa-circle-check"></i> Risposta entro 24 ore</li>
+        <li><i class="fa-solid fa-rocket"></i> Focus su Web3, DeFi e automazioni</li>
+        <li><i class="fa-solid fa-language"></i> Italiano · English</li>
+      </ul>
+    </section>
+
+    <section class="contact-grid">
+      <article class="contact-card">
+        <span class="badge">Direct</span>
+        <h2>Contatti rapidi</h2>
+        <p>Scegli il tuo canale preferito e raccontami cosa desideri costruire.</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <span class="badge badge-alt">Disponibilità</span>
+        <h2>Posso aiutarti con</h2>
+        <ul class="availability-list">
+          <li><i class="fa-solid fa-code"></i> Sviluppo smart contract & audit</li>
+          <li><i class="fa-solid fa-layer-group"></i> DApp frontend & integrazioni wallet</li>
+          <li><i class="fa-solid fa-chart-line"></i> Dashboard e automazioni on-chain</li>
+        </ul>
+      </article>
+
+      <form class="contact-card contact-form" action="#" method="post">
+        <span class="badge">Scrivimi</span>
+        <h2>Raccontami la tua idea</h2>
+        <div class="input-field">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" placeholder="Come ti chiami?" required>
+        </div>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="La tua email" required>
+        </div>
+        <div class="input-field">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="4" placeholder="Scrivi qui i dettagli" required></textarea>
+        </div>
+        <button type="submit">Invia messaggio</button>
+      </form>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2025 Blockchain Developer | Ardelean Jonathan</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          LinkedIn
+        </a>
+        <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          GitHub
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nav = document.querySelector('.navbar');
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('#primary-menu');
+
+      if (!nav || !toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        nav.classList.toggle('menu-open', !isExpanded);
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

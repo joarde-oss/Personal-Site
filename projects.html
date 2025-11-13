@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I miei Progetti</title>
+  <meta name="description"
+        content="In arrivo progetti Web3: smart contract, dApp e automazioni on-chain su cui sto lavorando.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="I miei Progetti – Blockchain Developer">
+  <meta property="og:description"
+        content="Scopri cosa sto costruendo tra smart contract, dApp e automazioni on-chain.">
+  <meta property="og:image" content="https://joarde-oss.github.io/Personal-Site/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="page page-projects">
+    <nav class="navbar">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="menu" id="primary-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="projects.html">Progetti</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </nav>
+
+    <main class="projects-page">
+      <section class="projects-hero">
+        <h1>Progetti in arrivo</h1>
+        <p>
+          Sto lavorando a nuovi progetti che saranno presto disponibili qui.
+        </p>
+        <p class="work-in-progress">🚧 Work in progress 🚧</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <span>© 2025 Blockchain Developer | Ardelean Jonathan</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          LinkedIn
+        </a>
+        <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          GitHub
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nav = document.querySelector('.navbar');
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('#primary-menu');
+
+      if (!nav || !toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        nav.classList.toggle('menu-open', !isExpanded);
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

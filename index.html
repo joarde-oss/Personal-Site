@@ -1,0 +1,161 @@
+ <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Blockchain Developer</title>
+  <meta name="description"
+        content="Sviluppatore blockchain che progetta infrastrutture Web3 scalabili, sicure e orientate all’esperienza utente." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio Blockchain Developer" />
+  <meta property="og:description"
+        content="Progetto infrastrutture Web3 scalabili e sicure, con un occhio attento all'esperienza utente e alle metriche operative." />
+  <meta property="og:image" content="https://joarde-oss.github.io/Personal-Site/assets/img/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <!-- Font Awesome per le icone social -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- CARD CENTRALE (tutto dentro) -->
+  <div class="page page-home">
+
+    <!-- Navbar interna, centrata -->
+    <nav class="navbar">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="menu" id="primary-menu">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="projects.html">Progetti</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </nav>
+
+    <main class="home-page">
+      <!-- HERO -->
+      <section class="hero home-hero" id="home">
+        <span class="hero-badge">Blockchain Developer</span>
+        <h1>Sono Jonathan Ardelean</h1>
+        <p class="hero-lead">
+          Disegno architetture Web3 che uniscono sicurezza, affidabilità operativa e una user experience fluida lungo tutto il ciclo di vita del prodotto.
+        </p>
+        <div class="hero-summary">
+          <p>
+            Arrivo da un background industriale: precisione, procedure e coordinamento di squadre sono l'ossatura che porto in ogni progetto. Nel Web3 li traduco in smart contract robusti, ambienti di test tracciabili e delivery misurabile.
+          </p>
+        </div>
+        <ul class="hero-highlights">
+          <li><i class="fa-solid fa-circle-check"></i> Smart contract progettati per audit indipendenti</li>
+          <li><i class="fa-solid fa-rocket"></i> DApp con flussi di onboarding chiari</li>
+          <li><i class="fa-solid fa-chart-line"></i> Automazioni on-chain che riducono tempi operativi</li>
+        </ul>
+
+      </section>
+      <section class="about-grid" id="about">
+        <article class="home-card">
+          <span class="badge">Profilo</span>
+          <h2>Da dove vengo</h2>
+          <p>
+            Curiosità e attenzione all'innovazione sono i tratti che mi accompagnano da sempre. Nel manifatturiero
+            ho maturato metodo, precisione e capacità di coordinare persone e processi, ma la routine ripetitiva mi ha
+            spinto a cercare sfide più stimolanti: è così che ho incontrato il mondo blockchain.
+          </p>
+          <p>
+            Fuori dalla fabbrica mi dedico ad approfondire tecnologia, gaming strategico e mentoring tra pari. Più mi
+            informo su Web3 e intelligenza artificiale, più cresce la voglia di trasformare questa passione in progetti
+            concreti, condividendo ciò che scopro con chi sta muovendo i primi passi in questo ecosistema.
+          </p>
+        </article>
+
+        <article class="home-card">
+          <span class="badge badge-alt">Competenze</span>
+          <h2>Punti di forza</h2>
+          <ul class="feature-list">
+            <li>
+              <strong>Smart Contracts</strong>
+              <span>Scrittura e audit di contratti Solidity con attenzione a sicurezza, test e monitoraggio post-deploy.</span>
+            </li>
+            <li>
+              <strong>DApp Frontend</strong>
+              <span>Interfacce responsive, onboarding chiaro e integrazione wallet (WalletConnect, Metamask).</span>
+            </li>
+            <li>
+              <strong>Automazione & Testing</strong>
+              <span>Pipeline CI, test automatizzati e deployment coordinato su testnet e mainnet.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="home-card">
+          <span class="badge">Metodo</span>
+          <h2>Come lavoro</h2>
+          <div class="stack-tags">
+            <span>Discovery</span>
+            <span>Prototipazione</span>
+            <span>Audit & Test</span>
+            <span>Deployment</span>
+            <span>Knowledge sharing</span>
+          </div>
+          <p>
+            Alterno momenti di ricerca e modellazione con sessioni di sviluppo rapide e misurabili.
+            Ogni progetto è accompagnato da revisioni incrociate, checklist di sicurezza e materiali
+            di handover per garantire continuità al team.
+          </p>
+        </article>
+      </section>
+
+    </main>
+
+    <footer>
+      <span>© 2025 Blockchain Developer | Ardelean Jonathan</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          LinkedIn
+        </a>
+        <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          GitHub
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nav = document.querySelector('.navbar');
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('#primary-menu');
+
+      if (!nav || !toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        nav.classList.toggle('menu-open', !isExpanded);
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('menu-open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
