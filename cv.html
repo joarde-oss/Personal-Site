@@ -20,21 +20,45 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="assets/js/lang.js" defer></script>
 </head>
-<body>
+<body data-page="cv">
+
+  <div class="language-gate" data-lang-gate>
+    <div class="language-modal">
+      <p class="switch-label" data-i18n="global.language.label">Lingua</p>
+      <h2 data-i18n="global.language.promptTitle">Scegli la lingua</h2>
+      <p data-i18n="global.language.promptBody">Seleziona come vuoi navigare il sito. Potrai cambiarla in qualsiasi momento.</p>
+      <div class="language-actions">
+        <button class="lang-btn" type="button" data-lang-choice="it" aria-pressed="false">
+          <span data-i18n="global.language.buttonIt">Italiano</span>
+        </button>
+        <button class="lang-btn lang-btn-secondary" type="button" data-lang-choice="en" aria-pressed="false">
+          <span data-i18n="global.language.buttonEn">Inglese</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <div class="page page-cv">
+    <div class="language-switch" data-i18n-attr="aria-label:global.language.promptTitle" aria-label="Scegli la lingua">
+      <span class="switch-label" data-i18n="global.language.label">Lingua</span>
+      <div class="language-chip-group" role="group" aria-label="Language selection">
+        <button class="language-chip" type="button" data-lang-choice="it" aria-pressed="false" data-i18n="global.language.switchIt">IT</button>
+        <button class="language-chip" type="button" data-lang-choice="en" aria-pressed="false" data-i18n="global.language.switchEn">EN</button>
+      </div>
+    </div>
     <nav class="navbar">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-i18n-attr="aria-label:global.nav.menuToggle" aria-label="Apri il menu di navigazione">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="menu" id="primary-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Progetti</a></li>
-        <li><a href="contattami.html">Contatti</a></li>
-        <li><a class="active" href="cv.html">CV</a></li>
+        <li><a href="index.html" data-i18n="global.nav.home">Home</a></li>
+        <li><a href="projects.html" data-i18n="global.nav.projects">Progetti</a></li>
+        <li><a href="contattami.html" data-i18n="global.nav.contact">Contatti</a></li>
+        <li><a class="active" href="cv.html" data-i18n="global.nav.cv">CV</a></li>
       </ul>
     </nav>
 
@@ -42,35 +66,35 @@
       <section class="cv-hero">
       <div class="cv-glow"></div>
       <div class="cv-glow cv-glow-secondary"></div>
-      <h1>Curriculum Vitae</h1>
-      <p>
+      <h1 data-i18n="cv.hero.title">Curriculum Vitae</h1>
+      <p data-i18n="cv.hero.body">
         Sviluppatore orientato al Web3 con esperienza nella creazione di smart contract, dApp e
         automazioni che collegano team tecnici e business.
       </p>
       <div class="cv-meta">
-        <span><i class="fa-solid fa-location-dot"></i> Piemonte, Italia</span>
-        <span><i class="fa-solid fa-briefcase"></i> Disponibile per collaborazioni</span>
-        <span><i class="fa-solid fa-language"></i> Italiano · English</span>
+        <span><i class="fa-solid fa-location-dot"></i> <span data-i18n="cv.hero.location">Piemonte, Italia</span></span>
+        <span><i class="fa-solid fa-briefcase"></i> <span data-i18n="cv.hero.availability">Disponibile per collaborazioni</span></span>
+        <span><i class="fa-solid fa-language"></i> <span data-i18n="cv.hero.languages">Italiano · English</span></span>
       </div>
     </section>
 
     <section class="cv-grid">
       <article class="cv-card">
-        <span class="badge">Esperienza</span>
-        <h2>Background professionale</h2>
+        <span class="badge" data-i18n="cv.experience.badge">Esperienza</span>
+        <h2 data-i18n="cv.experience.title">Background professionale</h2>
         <ul class="timeline">
           <li>
-            <span class="timeline-title">Vergnano Utensili</span>
-            <span class="timeline-meta">2017 – oggi · Operatore specializzato</span>
-            <p>
+            <span class="timeline-title" data-i18n="cv.experience.item1.title">Vergnano Utensili</span>
+            <span class="timeline-meta" data-i18n="cv.experience.item1.meta">2017 – oggi · Operatore specializzato</span>
+            <p data-i18n="cv.experience.item1.body">
               Rettificatore CNC, controllo qualità e ottimizzazione dei processi produttivi.
               
             </p>
           </li>
           <li>
-            <span class="timeline-title">Progetti Blockchain Freelance</span>
-            <span class="timeline-meta">2025 – oggi</span>
-            <p>
+            <span class="timeline-title" data-i18n="cv.experience.item2.title">Progetti Blockchain Freelance</span>
+            <span class="timeline-meta" data-i18n="cv.experience.item2.meta">2025 – oggi</span>
+            <p data-i18n="cv.experience.item2.body">
               Sviluppo di smart contract ERC-20/721, integrazioni wallet per frontend, audit,
               test automatizzati e deployment su ambienti pubblici e privati.
             </p>
@@ -79,115 +103,115 @@
       </article>
 
       <article class="cv-card">
-        <span class="badge badge-alt">Formazione</span>
-        <h2>Percorso</h2>
+        <span class="badge badge-alt" data-i18n="cv.education.badge">Formazione</span>
+        <h2 data-i18n="cv.education.title">Percorso</h2>
         <ul class="education-list">
           <li>
             <i class="fa-solid fa-graduation-cap"></i>
             <div>
-              <h3>IPSIA Andriano</h3>
-              <p>Qualifica professionale · Indirizzo meccanico</p>
+              <h3 data-i18n="cv.education.item1.title">IPSIA Andriano</h3>
+              <p data-i18n="cv.education.item1.body">Qualifica professionale · Indirizzo meccanico</p>
             </div>
           </li>
           <li>
             <i class="fa-solid fa-laptop-code"></i>
             <div>
-              <h3>Training Blockchain & Solidity</h3>
-              <p>Corso intensivo + autoformazione continua su DeFi, sicurezza e tooling</p>
+              <h3 data-i18n="cv.education.item2.title">Training Blockchain & Solidity</h3>
+              <p data-i18n="cv.education.item2.body">Corso intensivo + autoformazione continua su DeFi, sicurezza e tooling</p>
             </div>
           </li>
         </ul>
       </article>
 
       <article class="cv-card">
-        <span class="badge">Competenze</span>
-        <h2>Stack tecnico</h2>
+        <span class="badge" data-i18n="cv.skills.badge">Competenze</span>
+        <h2 data-i18n="cv.skills.title">Stack tecnico</h2>
         <div class="stack-tags">
-          <span>Solidity</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>Python</span>
-          <span>TypeScript</span>
-          <span>React</span>
-          <span>Git</span>
-          <span>IA</span>
+          <span data-i18n="cv.skills.tags.solidity">Solidity</span>
+          <span data-i18n="cv.skills.tags.html">HTML</span>
+          <span data-i18n="cv.skills.tags.css">CSS</span>
+          <span data-i18n="cv.skills.tags.python">Python</span>
+          <span data-i18n="cv.skills.tags.typescript">TypeScript</span>
+          <span data-i18n="cv.skills.tags.react">React</span>
+          <span data-i18n="cv.skills.tags.git">Git</span>
+          <span data-i18n="cv.skills.tags.ai">IA</span>
         </div>
         <ul class="skills-list">
-          <li><i class="fa-solid fa-shield-halved"></i> Audit di smart contract e security review</li>
-          <li><i class="fa-solid fa-diagram-project"></i> Architetture modulari per dApp</li>
-          <li><i class="fa-solid fa-robot"></i> Automazione di workflow e testing su pipeline</li>
+          <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="cv.skills.item1">Audit di smart contract e security review</span></li>
+          <li><i class="fa-solid fa-diagram-project"></i> <span data-i18n="cv.skills.item2">Architetture modulari per dApp</span></li>
+          <li><i class="fa-solid fa-robot"></i> <span data-i18n="cv.skills.item3">Automazione di workflow e testing su pipeline</span></li>
         </ul>
       </article>
 
       <article class="cv-card">
-        <span class="badge badge-alt">Soft Skills</span>
-        <h2>Approccio</h2>
+        <span class="badge badge-alt" data-i18n="cv.soft.badge">Soft Skills</span>
+        <h2 data-i18n="cv.soft.title">Approccio</h2>
         <ul class="skills-list">
-          <li><i class="fa-solid fa-people-group"></i> Collaborazione cross-team</li>
-          <li><i class="fa-solid fa-lightbulb"></i> Problem solving orientato ai risultati</li>
-          <li><i class="fa-solid fa-hourglass-half"></i> Gestione del tempo e priorità</li>
+          <li><i class="fa-solid fa-people-group"></i> <span data-i18n="cv.soft.item1">Collaborazione cross-team</span></li>
+          <li><i class="fa-solid fa-lightbulb"></i> <span data-i18n="cv.soft.item2">Problem solving orientato ai risultati</span></li>
+          <li><i class="fa-solid fa-hourglass-half"></i> <span data-i18n="cv.soft.item3">Gestione del tempo e priorità</span></li>
         </ul>
       </article>
       </section>
 
       <section class="cv-plain">
-        <h2>Curriculum Vitae</h2>
+        <h2 data-i18n="cv.plain.heading">Curriculum Vitae</h2>
         <div class="plain-header">
           <article class="plain-card plain-profile">
-            <h3>Profilo professionale</h3>
-            <p>
+            <h3 data-i18n="cv.plain.profile.title">Profilo professionale</h3>
+            <p data-i18n="cv.plain.profile.body">
               Rettificatore preciso e affidabile, specializzato nella lavorazione di creatori e nel
               collaudo finale degli utensili. Unisco manualità, rapidità di apprendimento e forte
               spirito collaborativo con un approccio sempre attento all'analisi e ai dettagli.
             </p>
           </article>
           <article class="plain-card plain-data">
-            <h3>Dati personali</h3>
-            <p><strong>Nome:</strong> Jonathan Ardelean</p>
-            <p><strong>Nascita:</strong> 13/07/1999 · Chieri (TO)</p>
-            <p><strong>Lingue:</strong> Italiano (madrelingua), Inglese (buona padronanza)</p>
+            <h3 data-i18n="cv.plain.data.title">Dati personali</h3>
+            <p><strong data-i18n="cv.plain.data.nameLabel">Nome:</strong> Jonathan Ardelean</p>
+            <p><strong data-i18n="cv.plain.data.birthLabel">Nascita:</strong> <span>13/07/1999 · Chieri (TO)</span></p>
+            <p><strong data-i18n="cv.plain.data.languagesLabel">Lingue:</strong> <span data-i18n="cv.plain.data.languagesValue">Italiano (madrelingua), Inglese (buona padronanza)</span></p>
           </article>
         </div>
 
         <article class="plain-card plain-experience">
-          <h3>Esperienza professionale</h3>
+          <h3 data-i18n="cv.plain.experience.title">Esperienza professionale</h3>
           <div class="experience-entry">
             <div class="experience-meta">
-              <span class="experience-period">2017 – oggi</span>
-              <span class="experience-role">Rettificatore</span>
+              <span class="experience-period" data-i18n="cv.plain.experience.period">2017 – oggi</span>
+              <span class="experience-role" data-i18n="cv.plain.experience.role">Rettificatore</span>
               <span class="experience-company">Vergnano Utensili</span>
             </div>
             <ul class="experience-points">
-              <li>Rettifica di creatori con monitoraggio costante delle tolleranze.</li>
-              <li>Collaudo e verifica finale per garantire conformità a standard elevati.</li>
-              <li>Supporto al team nella risoluzione di anomalie e nel passaggio di consegne.</li>
+              <li data-i18n="cv.plain.experience.point1">Rettifica di creatori con monitoraggio costante delle tolleranze.</li>
+              <li data-i18n="cv.plain.experience.point2">Collaudo e verifica finale per garantire conformità a standard elevati.</li>
+              <li data-i18n="cv.plain.experience.point3">Supporto al team nella risoluzione di anomalie e nel passaggio di consegne.</li>
             </ul>
           </div>
         </article>
 
         <div class="plain-grid">
           <article class="plain-card plain-education">
-            <h3>Istruzione</h3>
+            <h3 data-i18n="cv.plain.education.title">Istruzione</h3>
             <p>
-              <strong>Qualifica superiore</strong><br />
-              IPSIA Andriano · Indirizzo meccanico
+              <strong data-i18n="cv.plain.education.level">Qualifica superiore</strong><br />
+              <span data-i18n="cv.plain.education.school">IPSIA Andriano · Indirizzo meccanico</span>
             </p>
           </article>
           <article class="plain-card plain-personal">
-            <h3>Competenze personali</h3>
+            <h3 data-i18n="cv.plain.personal.title">Competenze personali</h3>
             <ul>
-              <li>Ottima manualità e precisione operativa.</li>
-              <li>Apprendimento rapido di processi, macchinari e strumenti digitali.</li>
-              <li>Collaborazione efficace con i reparti di produzione e controllo qualità.</li>
-              <li>Analisi accurata dei dati di lavorazione e identificazione tempestiva degli errori.</li>
-              <li>Attenzione costante ai dettagli e senso di responsabilità sul risultato finale.</li>
+              <li data-i18n="cv.plain.personal.item1">Ottima manualità e precisione operativa.</li>
+              <li data-i18n="cv.plain.personal.item2">Apprendimento rapido di processi, macchinari e strumenti digitali.</li>
+              <li data-i18n="cv.plain.personal.item3">Collaborazione efficace con i reparti di produzione e controllo qualità.</li>
+              <li data-i18n="cv.plain.personal.item4">Analisi accurata dei dati di lavorazione e identificazione tempestiva degli errori.</li>
+              <li data-i18n="cv.plain.personal.item5">Attenzione costante ai dettagli e senso di responsabilità sul risultato finale.</li>
             </ul>
           </article>
           <article class="plain-card plain-digital">
-            <h3>Competenze digitali</h3>
+            <h3 data-i18n="cv.plain.digital.title">Competenze digitali</h3>
             <ul>
-              <li>Conoscenza di base di intelligenza artificiale applicata a flussi produttivi e analisi dati.</li>
-              <li>Linguaggi di programmazione e markup: Python, HTML, CSS, TypeScript.</li>
+              <li data-i18n="cv.plain.digital.item1">Conoscenza di base di intelligenza artificiale applicata a flussi produttivi e analisi dati.</li>
+              <li data-i18n="cv.plain.digital.item2">Linguaggi di programmazione e markup: Python, HTML, CSS, TypeScript.</li>
             </ul>
           </article>
         </div>
@@ -195,15 +219,15 @@
     </main>
 
     <footer>
-      <span>© 2025 Blockchain Developer | Ardelean Jonathan</span>
+      <span data-i18n="global.footer.copy">© 2025 Blockchain Developer | Ardelean Jonathan</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-          LinkedIn
+          <span data-i18n="global.footer.linkedin">LinkedIn</span>
         </a>
         <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-github" aria-hidden="true"></i>
-          GitHub
+          <span data-i18n="global.footer.github">GitHub</span>
         </a>
       </div>
     </footer>

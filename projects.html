@@ -20,42 +20,66 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="assets/js/lang.js" defer></script>
 </head>
-<body>
+<body data-page="projects">
+
+  <div class="language-gate" data-lang-gate>
+    <div class="language-modal">
+      <p class="switch-label" data-i18n="global.language.label">Lingua</p>
+      <h2 data-i18n="global.language.promptTitle">Scegli la lingua</h2>
+      <p data-i18n="global.language.promptBody">Seleziona come vuoi navigare il sito. Potrai cambiarla in qualsiasi momento.</p>
+      <div class="language-actions">
+        <button class="lang-btn" type="button" data-lang-choice="it" aria-pressed="false">
+          <span data-i18n="global.language.buttonIt">Italiano</span>
+        </button>
+        <button class="lang-btn lang-btn-secondary" type="button" data-lang-choice="en" aria-pressed="false">
+          <span data-i18n="global.language.buttonEn">Inglese</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <div class="page page-projects">
+    <div class="language-switch" data-i18n-attr="aria-label:global.language.promptTitle" aria-label="Scegli la lingua">
+      <span class="switch-label" data-i18n="global.language.label">Lingua</span>
+      <div class="language-chip-group" role="group" aria-label="Language selection">
+        <button class="language-chip" type="button" data-lang-choice="it" aria-pressed="false" data-i18n="global.language.switchIt">IT</button>
+        <button class="language-chip" type="button" data-lang-choice="en" aria-pressed="false" data-i18n="global.language.switchEn">EN</button>
+      </div>
+    </div>
     <nav class="navbar">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-i18n-attr="aria-label:global.nav.menuToggle" aria-label="Apri il menu di navigazione">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="menu" id="primary-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="projects.html">Progetti</a></li>
-        <li><a href="contattami.html">Contatti</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <li><a href="index.html" data-i18n="global.nav.home">Home</a></li>
+        <li><a class="active" href="projects.html" data-i18n="global.nav.projects">Progetti</a></li>
+        <li><a href="contattami.html" data-i18n="global.nav.contact">Contatti</a></li>
+        <li><a href="cv.html" data-i18n="global.nav.cv">CV</a></li>
       </ul>
     </nav>
 
     <main class="projects-page">
       <section class="projects-hero">
         <div class="projects-hero-content">
-          <p class="section-kicker">Showcase</p>
-          <h1>Esperimenti Web e micro‑tool personali</h1>
-          <p>
+          <p class="section-kicker" data-i18n="projects.hero.kicker">Showcase</p>
+          <h1 data-i18n="projects.hero.title">Esperimenti Web e micro‑tool personali</h1>
+          <p data-i18n="projects.hero.body">
             Una selezione di micro progetti costruiti per esplorare nuove idee, migliorare il mio flusso con JavaScript
             vanilla e curare i dettagli di UI/UX. Ogni release nasce da curiosità e voglia di automazione.
           </p>
         </div>
         <ul class="projects-hero-stats">
           <li>
-            <span class="stat-value">02</span>
-            <span class="stat-label">Progetti live</span>
+            <span class="stat-value">03</span>
+            <span class="stat-label" data-i18n="projects.stats.live">Progetti live</span>
           </li>
           <li>
             <span class="stat-value">∞</span>
-            <span class="stat-label">Iterazioni & idee</span>
+            <span class="stat-label" data-i18n="projects.stats.ideas">Iterazioni & idee</span>
           </li>
         </ul>
       </section>
@@ -66,17 +90,17 @@
             <span class="project-icon" aria-hidden="true">
               <i class="fa-solid fa-gauge-simple"></i>
             </span>
-            <span class="project-pill project-pill-live">Live</span>
+            <span class="project-pill project-pill-live" data-i18n="projects.project1.status">Live</span>
           </div>
           <div class="project-body">
-            <h2>Counter App</h2>
-            <p>
+            <h2 data-i18n="projects.project1.title">Counter App</h2>
+            <p data-i18n="projects.project1.body">
               Web app minimale per gestire incrementi/decrementi rapidi con reset immediato. Perfetta per esercitarmi con
               eventi, stato locale e micro‑interazioni senza framework.
             </p>
             <div class="project-meta">
-              <span>Tipologia: Utility</span>
-              <span>Focus: DOM & UX micro</span>
+              <span data-i18n="projects.project1.type">Tipologia: Utility</span>
+              <span data-i18n="projects.project1.focus">Focus: DOM & UX micro</span>
             </div>
             <ul class="project-tags">
               <li>JavaScript</li>
@@ -86,12 +110,12 @@
           </div>
           <div class="project-foot">
             <a class="project-link" href="https://joarde-oss.github.io/java-script-project/" target="_blank" rel="noreferrer">
-              Apri il progetto
+              <span data-i18n="projects.project1.link">Apri il progetto</span>
               <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
             <a class="project-secondary-link" href="https://github.com/joarde-oss/java-script-project" target="_blank" rel="noreferrer">
               <i class="fa-brands fa-github" aria-hidden="true"></i>
-              Codice sorgente
+              <span data-i18n="projects.project1.source">Codice sorgente</span>
             </a>
           </div>
         </article>
@@ -101,20 +125,21 @@
             <span class="project-icon" aria-hidden="true">
               <i class="fa-solid fa-cube"></i>
             </span>
-            <span class="project-pill project-pill-live">Live</span>
+            <span class="project-pill project-pill-live" data-i18n="projects.project2.status">Live</span>
           </div>
           <div class="project-body">
-            <h2>3D Project</h2>
-            <p>
+            <h2 data-i18n="projects.project2.title">3D Project</h2>
+            <p data-i18n="projects.project2.body">
               Esperimento 3D browser-based con geometrie animate e controlli orbit per esplorare la scena. Un banco di
               prova per ottimizzare pipeline WebGL e rifinire la resa visiva in tempo reale.
             </p>
             <div class="project-meta">
-              <span>Tipologia: Esperimento 3D</span>
-              <span>Focus: Rendering & Animazioni</span>
+              <span data-i18n="projects.project2.type">Tipologia: Esperimento 3D</span>
+              <span data-i18n="projects.project2.focus">Focus: Rendering & Animazioni</span>
             </div>
             <ul class="project-tags">
               <li>JavaScript</li>
+              <li>HTML</li>
               <li>Three.js</li>
               <li>WebGL</li>
               <li>CSS</li>
@@ -122,12 +147,48 @@
           </div>
           <div class="project-foot">
             <a class="project-link" href="https://joarde-oss.github.io/3D-Project/" target="_blank" rel="noreferrer">
-              Apri il progetto
+              <span data-i18n="projects.project2.link">Apri il progetto</span>
               <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
             <a class="project-secondary-link" href="https://github.com/joarde-oss/3D-Project" target="_blank" rel="noreferrer">
               <i class="fa-brands fa-github" aria-hidden="true"></i>
-              Codice sorgente
+              <span data-i18n="projects.project2.source">Codice sorgente</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-head">
+            <span class="project-icon" aria-hidden="true">
+              <i class="fa-solid fa-gamepad"></i>
+            </span>
+            <span class="project-pill project-pill-live" data-i18n="projects.project3.status">Live</span>
+          </div>
+          <div class="project-body">
+            <h2 data-i18n="projects.project3.title">3D Game</h2>
+            <p data-i18n="projects.project3.body">
+              Mini gioco 3D in browser con controlli orbit e possibilità di distruggere oggetti intorno. Evoluzione del progetto 3D per sperimentare loop di gioco leggeri e feedback visivi.
+            </p>
+            <div class="project-meta">
+              <span data-i18n="projects.project3.type">Tipologia: Gioco 3D</span>
+              <span data-i18n="projects.project3.focus">Focus: Gameplay & Rendering</span>
+            </div>
+            <ul class="project-tags">
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>Three.js</li>
+              <li>WebGL</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <div class="project-foot">
+            <a class="project-link" href="https://joarde-oss.github.io/3D-Game-/" target="_blank" rel="noreferrer">
+              <span data-i18n="projects.project3.link">Apri il gioco</span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+            <a class="project-secondary-link" href="https://github.com/joarde-oss/3D-Game-" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span data-i18n="projects.project3.source">Codice sorgente</span>
             </a>
           </div>
         </article>
@@ -136,15 +197,15 @@
     </main>
 
     <footer>
-      <span>© 2025 Blockchain Developer | Ardelean Jonathan</span>
+      <span data-i18n="global.footer.copy">© 2025 Blockchain Developer | Ardelean Jonathan</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-          LinkedIn
+          <span data-i18n="global.footer.linkedin">LinkedIn</span>
         </a>
         <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-github" aria-hidden="true"></i>
-          GitHub
+          <span data-i18n="global.footer.github">GitHub</span>
         </a>
       </div>
     </footer>

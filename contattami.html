@@ -20,21 +20,45 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="assets/js/lang.js" defer></script>
 </head>
-<body>
+<body data-page="contact">
+
+  <div class="language-gate" data-lang-gate>
+    <div class="language-modal">
+      <p class="switch-label" data-i18n="global.language.label">Lingua</p>
+      <h2 data-i18n="global.language.promptTitle">Scegli la lingua</h2>
+      <p data-i18n="global.language.promptBody">Seleziona come vuoi navigare il sito. Potrai cambiarla in qualsiasi momento.</p>
+      <div class="language-actions">
+        <button class="lang-btn" type="button" data-lang-choice="it" aria-pressed="false">
+          <span data-i18n="global.language.buttonIt">Italiano</span>
+        </button>
+        <button class="lang-btn lang-btn-secondary" type="button" data-lang-choice="en" aria-pressed="false">
+          <span data-i18n="global.language.buttonEn">Inglese</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <div class="page page-contact">
+    <div class="language-switch" data-i18n-attr="aria-label:global.language.promptTitle" aria-label="Scegli la lingua">
+      <span class="switch-label" data-i18n="global.language.label">Lingua</span>
+      <div class="language-chip-group" role="group" aria-label="Language selection">
+        <button class="language-chip" type="button" data-lang-choice="it" aria-pressed="false" data-i18n="global.language.switchIt">IT</button>
+        <button class="language-chip" type="button" data-lang-choice="en" aria-pressed="false" data-i18n="global.language.switchEn">EN</button>
+      </div>
+    </div>
     <nav class="navbar">
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Apri il menu di navigazione">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-i18n-attr="aria-label:global.nav.menuToggle" aria-label="Apri il menu di navigazione">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="menu" id="primary-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Progetti</a></li>
-        <li><a class="active" href="contattami.html">Contatti</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <li><a href="index.html" data-i18n="global.nav.home">Home</a></li>
+        <li><a href="projects.html" data-i18n="global.nav.projects">Progetti</a></li>
+        <li><a class="active" href="contattami.html" data-i18n="global.nav.contact">Contatti</a></li>
+        <li><a href="cv.html" data-i18n="global.nav.cv">CV</a></li>
       </ul>
     </nav>
 
@@ -42,24 +66,24 @@
       <section class="contact-hero">
       <div class="glow-ring"></div>
       <div class="glow-ring glow-ring-secondary"></div>
-      <h1>Parliamo del tuo prossimo progetto</h1>
-      <p>
+      <h1 data-i18n="contact.hero.title">Parliamo del tuo prossimo progetto</h1>
+      <p data-i18n="contact.hero.body">
         Che si tratti di progettare smart contract, creare una dApp o analizzare dati on-chain,
         possiamo costruire insieme un percorso chiaro. Scegli il canale che preferisci e raccontami
         le tue priorità.
       </p>
       <ul class="contact-highlights">
-        <li><i class="fa-solid fa-circle-check"></i> Risposta entro 24 ore</li>
-        <li><i class="fa-solid fa-rocket"></i> Focus su Web3, DeFi e automazioni</li>
-        <li><i class="fa-solid fa-language"></i> Italiano · English</li>
+        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="contact.hero.highlight1">Risposta entro 24 ore</span></li>
+        <li><i class="fa-solid fa-rocket"></i> <span data-i18n="contact.hero.highlight2">Focus su Web3, DeFi e automazioni</span></li>
+        <li><i class="fa-solid fa-language"></i> <span data-i18n="contact.hero.highlight3">Italiano · English</span></li>
       </ul>
     </section>
 
     <section class="contact-grid">
       <article class="contact-card">
-        <span class="badge">Direct</span>
-        <h2>Contatti rapidi</h2>
-        <p>Scegli il tuo canale preferito e raccontami cosa desideri costruire.</p>
+        <span class="badge" data-i18n="contact.direct.badge">Direct</span>
+        <h2 data-i18n="contact.direct.title">Contatti rapidi</h2>
+        <p data-i18n="contact.direct.body">Scegli il tuo canale preferito e raccontami cosa desideri costruire.</p>
         <div class="contact-links">
           <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
           <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -67,45 +91,45 @@
       </article>
 
       <article class="contact-card">
-        <span class="badge badge-alt">Disponibilità</span>
-        <h2>Posso aiutarti con</h2>
+        <span class="badge badge-alt" data-i18n="contact.availability.badge">Disponibilità</span>
+        <h2 data-i18n="contact.availability.title">Posso aiutarti con</h2>
         <ul class="availability-list">
-          <li><i class="fa-solid fa-code"></i> Sviluppo smart contract & audit</li>
-          <li><i class="fa-solid fa-layer-group"></i> DApp frontend & integrazioni wallet</li>
-          <li><i class="fa-solid fa-chart-line"></i> Dashboard e automazioni on-chain</li>
+          <li><i class="fa-solid fa-code"></i> <span data-i18n="contact.availability.item1">Sviluppo smart contract & audit</span></li>
+          <li><i class="fa-solid fa-layer-group"></i> <span data-i18n="contact.availability.item2">DApp frontend & integrazioni wallet</span></li>
+          <li><i class="fa-solid fa-chart-line"></i> <span data-i18n="contact.availability.item3">Dashboard e automazioni on-chain</span></li>
         </ul>
       </article>
 
       <form class="contact-card contact-form" action="#" method="post">
-        <span class="badge">Scrivimi</span>
-        <h2>Raccontami la tua idea</h2>
+        <span class="badge" data-i18n="contact.form.badge">Scrivimi</span>
+        <h2 data-i18n="contact.form.title">Raccontami la tua idea</h2>
         <div class="input-field">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" placeholder="Come ti chiami?" required>
+          <label for="name" data-i18n="contact.form.nameLabel">Nome</label>
+          <input type="text" id="name" name="name" placeholder="Come ti chiami?" required data-i18n-attr="placeholder:contact.form.namePlaceholder">
         </div>
         <div class="input-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="La tua email" required>
+          <label for="email" data-i18n="contact.form.emailLabel">Email</label>
+          <input type="email" id="email" name="email" placeholder="La tua email" required data-i18n-attr="placeholder:contact.form.emailPlaceholder">
         </div>
         <div class="input-field">
-          <label for="message">Messaggio</label>
-          <textarea id="message" name="message" rows="4" placeholder="Scrivi qui i dettagli" required></textarea>
+          <label for="message" data-i18n="contact.form.messageLabel">Messaggio</label>
+          <textarea id="message" name="message" rows="4" placeholder="Scrivi qui i dettagli" required data-i18n-attr="placeholder:contact.form.messagePlaceholder"></textarea>
         </div>
-        <button type="submit">Invia messaggio</button>
+        <button type="submit" data-i18n="contact.form.submit">Invia messaggio</button>
       </form>
       </section>
     </main>
 
     <footer>
-      <span>© 2025 Blockchain Developer | Ardelean Jonathan</span>
+      <span data-i18n="global.footer.copy">© 2025 Blockchain Developer | Ardelean Jonathan</span>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/jonathan-ardelean-49bb09290/" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-          LinkedIn
+          <span data-i18n="global.footer.linkedin">LinkedIn</span>
         </a>
         <a href="https://github.com/joarde-oss" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-github" aria-hidden="true"></i>
-          GitHub
+          <span data-i18n="global.footer.github">GitHub</span>
         </a>
       </div>
     </footer>
